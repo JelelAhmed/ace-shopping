@@ -1,14 +1,25 @@
 import React from 'react';
+import {  Route, Routes } from 'react-router-dom';
 
-import Directory from './components/directory/directory.component';
+import Home from './routes/home/home.component';
+import Navigation from './routes/navigation/navigation.component';
 
 import './App.css';
 
+
+const ShopPage = () => (
+	<div>'I am the shop page'</div>
+)
+
 const App = () => {
 	return (
-		<div className='categories-container'>
-			<Directory />
-		</div>
+		<Routes>
+			<Route path='/' element={<Navigation />}>
+				<Route index element={<Home />} />
+				<Route path='shop' element={<ShopPage />} />
+			</Route>
+		</Routes>
 	)
 }
+
 export default App;
