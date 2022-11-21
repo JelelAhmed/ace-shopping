@@ -5,6 +5,7 @@ import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 
+
 import './sign-up-form.styles.scss';
 
 const defaultFormFields = {
@@ -20,7 +21,6 @@ const SignUpForm = () => {
 	const [formfields, setFormFields] = useState(defaultFormFields);
 	const { displayName, email, password, confirmPassword } = formfields;
 
-	console.log(formfields);
 
 	const resetFormFields = () => {
 		setFormFields(defaultFormFields);
