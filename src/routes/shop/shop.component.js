@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import ProductCard from '../../components/product-card/product-card.component';
 
 import './shop.styles.scss';
-import SHOP_DATA from '../../shop-data.json';
+import SHOP_DATA from '../../shop-data';
 
 
 const Shop = () => {
